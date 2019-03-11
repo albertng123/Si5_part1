@@ -2,19 +2,22 @@
 <html>
 <head>
 	<title>Tampil Data</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
 	<h3>DATA MAHASISWA</h3>
 	<a href="tambah-data.php">+TAMBAH</a>
-	<table	text="times new roman" border="1">
-		<thead bgcolor="#6495ED" color="#FFFAF0">
-			<th>No</th>
-			<th>NIM</th>
-			<th>Nama Lengkap</th>
-			<th>KOM</th>
-			<th>Jurusan</th>
-			<th colspan="2">Aksi</th>
-		</thead>
+	<table class="table table-hover table-dark"">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Nim</th>
+      <th scope="col">Nama Lengkap</th>
+	  <th scope="col">Kom</th>
+      <th scope="col">Jurusan</th>
+	  <th scope="col" colspan="2">Aksi</th>
+	</tr>
+  </thead>
 		<tbody>
 			<?php
 				include "koneksi.php";
@@ -34,7 +37,7 @@
 					$jurusan = $data["jurusan"];
  
 					echo "<tr>
-							<td>$no</td>
+							<th scope='row'>$no</th>
 							<td>$nim</td>
 							<td>$nama</td>
 							<td>$kom</td>
